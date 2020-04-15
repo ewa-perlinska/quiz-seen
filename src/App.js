@@ -1,12 +1,13 @@
 import React from "react";
-
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Play from "./components/quiz/Play";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p> yo ! form quiz </p>
-      </header>
-    </div>
+    <Router>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/play" component={Play} />
+    </Router>
   );
 }
 
